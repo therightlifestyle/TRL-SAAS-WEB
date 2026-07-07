@@ -119,4 +119,39 @@ Not words on a wall. The filters for every decision we make.
 
 ---
 
-## 📂 Project Structure
+👤 Founder
+<div align="center">
+Rashid Muhammad
+Founder & CEO — TRL
+
+"The world does not need more people with plans. It needs people who execute on the days when it is hard. Those are the days that build empires."
+
+Email
+WhatsApp
+Phone
+
+</div>
+TRL was born from a real feeling — the feeling of having ambition but no system. Built in public, one day at a time.
+
+🤝 Contributing
+TRL is a vision in motion. If you'd like to collaborate, partner, or contribute:
+
+Fork the repository
+Create your feature branch (git checkout -b feature/amazing-feature)
+Commit your changes (git commit -m 'Add amazing feature')
+Push to the branch (git push origin feature/amazing-feature)
+Open a Pull Request
+📄 License
+This project is licensed under the MIT License — see the 
+LICENSE
+ file for details.
+
+<div align="center">
+Join the Journey 🚀
+Be part of TRL from Day One.
+
+Get Early Access
+
+Building toward Dubai, UAE 🇦🇪
+
+</div> ```
