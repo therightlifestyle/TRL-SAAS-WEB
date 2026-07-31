@@ -4,7 +4,7 @@
 
 [![Live Site](https://img.shields.io/badge/Live-TRL--SAAS--WEB-00C853?style=for-the-badge&logo=github&logoColor=white)](https://therightlifestyle.github.io/TRL-SAAS-WEB/)
 ![Status](https://img.shields.io/badge/Status-In%20Development-FFB300?style=for-the-badge)
-![License](https://img.shields.io/badge/License-MIT-1E88E5?style=for-the-badge)
+![License](https://img.shields.io/badge/License-Proprietary-DC2626?style=for-the-badge)
 ![Stack](https://img.shields.io/badge/Built%20With-HTML%20%7C%20CSS%20%7C%20JS-FF6D00?style=for-the-badge)
 
 **[Visit the Live Platform →](https://therightlifestyle.github.io/TRL-SAAS-WEB/)**
