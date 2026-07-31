@@ -570,3 +570,11 @@ footer { background:var(--dark);border-top:1px solid var(--border);padding:52px 
     .footer-grid { grid-template-columns:1fr; }
     .contact-chips { flex-direction:column; }
     }
+/* ── MOMENTUM ── */
+.momentum { padding: 64px 24px; border-bottom: 1px solid var(--border); }
+.momentum-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+.momentum-item { text-align: center; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 26px 18px; transition: all 0.3s; }
+.momentum-item:hover { border-color: var(--primary); transform: translateY(-3px); }
+.momentum-number { font-size: 34px; font-weight: 900; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; letter-spacing: -1px; margin-bottom: 6px; }
+.momentum-label { font-size: 12px; color: var(--text-muted); font-weight: 500; line-height: 1.5; }
+@media (max-width:560px) { .momentum-grid { grid-template-columns: 1fr; } }
