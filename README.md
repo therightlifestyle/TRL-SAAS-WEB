@@ -1,206 +1,153 @@
-<div align="center">
-
 # TRL — The Right Lifestyle
-# ⚡ TRL — The Right Lifestyle
 
-### The Operating System for Ambition
+**The Operating System for Ambition**
 
-  <img alt="Built With" src="https://img.shields.io/badge/Built%20With-HTML%20%7C%20CSS%20%7C%20JS-FF6D00?style=for-the-badge" />
-</p>
+[![Live Site](https://img.shields.io/badge/Live-TRL--SAAS--WEB-00C853?style=for-the-badge&logo=github&logoColor=white)](https://therightlifestyle.github.io/TRL-SAAS-WEB/)
+![Status](https://img.shields.io/badge/Status-In%20Development-FFB300?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-1E88E5?style=for-the-badge)
+![Stack](https://img.shields.io/badge/Built%20With-HTML%20%7C%20CSS%20%7C%20JS-FF6D00?style=for-the-badge)
 
-🔗 **Live Demo:** [therightlifestyle.github.io/TRL-SAAS-WEB](https://therightlifestyle.github.io/TRL-SAAS-WEB/)
-🌐 **Live Site:** [therightlifestyle.github.io/TRL-SAAS-WEB](https://therightlifestyle.github.io/TRL-SAAS-WEB/)
+**[Visit the Live Platform →](https://therightlifestyle.github.io/TRL-SAAS-WEB/)**
 
 ![TRL — The Operating System for Ambition](og-image.png)
 
-</div>
+---
 
+## About
 
-Most people have goals. Most people have dreams. **What they lack is the system.** TRL exists to give every ambitious person the tools, knowledge, and systems to actually build the life they envision — **not one day. Starting today.**
+TRL — The Right Lifestyle — is building the operating system for ambitious people: one unified ecosystem where goals, business, AI guidance, education, and community converge into a single engine for execution.
 
-This repository hosts the **TRL SaaS web platform** — the marketing site and gateway to the TRL ecosystem.
-This repository hosts the **official TRL website** — the marketing site and gateway to the TRL ecosystem.
+**Our Mission:** Give every ambitious person the system to build the life they envision — not one day. Starting today.
+
+**Our Vision:** A world where ambition is never wasted for lack of structure.
 
 ---
 
-## 🖥️ The Website
+## The Problem
 
-A single-page experience. Zero frameworks. Zero build step. Just fast, polished, hand-crafted code.
+**92% of people fail to achieve their goals.** Not for lack of drive — for lack of a system.
 
-### ✨ What's Inside
+Ambition without infrastructure becomes frustration. Goals live in notes, plans die in group chats, and progress is measured in software never designed for it. TRL exists to close that gap — permanently. We build the bridge between where people are and where they intend to be, through:
 
-- **Hero** — animated particle canvas, typewriter headline, live stat counters
-- **Ecosystem** — the Six Pillars as interactive 3D-tilt cards
-- **Roadmap** — the TRL 5-year vision as an animated timeline
-- **Values** — the code every TRL decision runs through
-- **Founder** — the story, plus direct Email / WhatsApp / Call chips
-- **FAQ** — smooth accordion answering the big questions
-- **Contact** — working early-access form with validation (Formspree-powered)
-- **Extras** — light/dark theme that remembers your choice, custom cursor, brand ticker, mobile menu, back-to-top
-
-### 🏗️ Built Right
-
-- **Accessible** — full keyboard navigation, ARIA states, skip-to-content link, screen-reader labels, and complete `prefers-reduced-motion` support
-- **Fast** — zero dependencies, throttled scroll handlers, particles pause off-screen, retina-sharp canvas, preconnected fonts
-- **Shareable** — Open Graph + Twitter Card previews, inline SVG favicon, canonical URL, theme-color
-- **Honest** — the contact form really sends. No fake success messages, ever.
+- **Technology** — AI-powered systems that adapt to individual goals and amplify daily execution
+- **Education** — Applied knowledge that connects learning directly to doing
+- **Community** — A global network of people who refuse to settle
 
 ---
 
-## 📁 Project Structure
+## The Ecosystem — Six Pillars
 
-```
-TRL-SAAS-WEB/
-├── index.html     → markup, SEO & social meta, all sections
-├── style.css      → design system, layout, animations
-├── script.js      → every interaction, vanilla JS only
-├── og-image.png   → social share preview card
-└── LICENSE        → MIT
-```
+Each product serves one mission: better lifestyles through better systems.
 
----
-
-## ▶️ Run Locally
-
-No installation. No dependencies. Two options:
-
-```bash
-# Option A — just open it
-open index.html            # macOS
-start index.html           # Windows
-xdg-open index.html        # Linux
-
-# Option B — serve it (recommended)
-python3 -m http.server 8000
-# then visit http://localhost:8000
-```
+| Pillar | Description | Status |
+|--------|-------------|--------|
+| 🚀 **TRL SaaS** | The core platform — goals, habits, projects, revenue tracking, and AI guidance in one intelligent workspace | ● In Development |
+| 🎓 **TRL Academy** | Education that connects directly to execution — learn it, then apply it inside TRL | ◎ Coming Soon |
+| 🤖 **TRL AI Labs** | The intelligence layer — AI that knows your goals and accelerates your growth | ◎ Coming Soon |
+| 🌍 **TRL Community** | The global network of ambitious people — accountability, connection, collaboration | ● Building Now |
+| 🛒 **TRL Marketplace** | Templates, systems, and tools from successful entrepreneurs | ◎ Coming Soon |
+| 💼 **TRL Ventures** | The investment and partnership arm backing the next generation of founders | ◈ Future Vision |
 
 ---
 
-## ✉️ Contact Form Setup
+## This Repository — TRL Web Platform
 
-The form is powered by [Formspree](https://formspree.io) (free tier) — no backend needed.
+The official web presence and public gateway to the TRL ecosystem. A single-page platform engineered to production standards — no frameworks, no build tooling, no dependencies.
 
-1. Create a form at [formspree.io](https://formspree.io) with your recipient email
-2. Copy your form ID (e.g. `xrgkpzlq`)
-3. Replace `YOUR_FORM_ID` in `index.html`:
+### Capabilities
 
-```html
-<form class="contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
-```
+- Immersive hero with a live canvas particle system and dynamic typewriter headline
+- Interactive ecosystem showcase with 3D card physics
+- Animated five-year roadmap timeline
+- Accessible FAQ accordion with complete keyboard support
+- Validated contact pipeline delivered directly to the founder's inbox
+- Adaptive light/dark interface with persistent user preference
+- Fully responsive across desktop, tablet, and mobile
 
-That's it — submissions arrive straight in your inbox.
+### Engineering Standards
 
----
+- **Zero-dependency architecture** — HTML5, modern CSS, ES6+ JavaScript. Nothing else.
+- **Accessibility-first** — full keyboard operability, ARIA semantics, screen-reader labeling, `prefers-reduced-motion` compliance
+- **Performance** — requestAnimationFrame-throttled handlers, intersection-based pausing for off-screen animation, retina-ready canvas, preconnected font delivery
+- **Distribution-ready** — Open Graph and Twitter Card metadata, canonical URL, theme-color, inline SVG favicon
 
-## ☁️ Deployment
+### Stack
 
-The site deploys free via **GitHub Pages**:
-
-1. Repo **Settings → Pages**
-2. Source: **Deploy from a branch** → `main` → `/ (root)` → Save
-3. Live in ~1 minute at `https://<username>.github.io/TRL-SAAS-WEB/`
-
----
-
-
-- ⚡ **Technology** — AI-powered tools that adapt to your goals and amplify your execution every day.
-- 📚 **Education** — Real knowledge bridging learning and doing. Applied, not theoretical.
-- 🌍 **Community** — The energy of people who refuse to settle.
-
----
-
+| Layer | Technology |
+|-------|------------|
+| Frontend | HTML5 · CSS3 · JavaScript (ES6+) |
+| Typography | Inter |
+| Form Delivery | Formspree |
+| Hosting | GitHub Pages |
+| Dependencies | None |
 
 ---
 
-## 💰 Pricing
-## 💰 Pricing (Planned)
+## Roadmap — The Five-Year Vision
 
-| Plan | Price | For |
-|------|-------|-----|
+Every empire is built one day at a time.
 
-## 💻 Tech Stack
-
-- **Frontend:** HTML5, CSS3, JavaScript (ES6+)
-- **Frontend:** HTML5, CSS3 (custom properties, grid, clamp), vanilla JavaScript (ES6+)
-- **Fonts:** Inter via Google Fonts
-- **Forms:** Formspree
-- **Hosting:** GitHub Pages
-- **Animations:** Custom CSS animations & smooth scroll
-- **Responsive:** Mobile-first design
-- **Dependencies:** none. **Build step:** none. **Frameworks:** none.
+| Phase | Focus | Key Milestones |
+|-------|-------|----------------|
+| **Year 1 — Now** | Foundation & First Product | TRL brand · SaaS MVP · First users |
+| **Year 2** | Product-Market Fit & Growth | Revenue · Team · TRL Academy |
+| **Year 3** | Dubai Expansion & International Reach | Dubai presence · MENA region · Arabic platform |
+| **Years 4–5** | Global Ecosystem & TRL Ventures | Global community · Marketplace · AI Labs · Ventures |
 
 ---
 
-👤 Founder
-## 👤 The Founder
+## Core Values
 
-<div align="center">
-Rashid Muhammad
+Not words on a wall — the filters for every decision we make.
 
-**Rashid Muhammad**
-Founder & CEO — TRL
+1. **Execution Over Perfection** — Done and learning beats perfect and waiting.
+2. **Radical Honesty** — No spin. No shortcuts. Integrity is the foundation of trust.
+3. **User Obsession** — Every decision starts with one question: *Is this genuinely good for our user?*
+4. **Ownership Mentality** — We own our outcomes. See a problem, solve it.
+5. **Continuous Learning** — The company grows as the founder grows. Always.
+6. **Ambition With Humility** — Big vision, open mind. Humble enough to learn. Bold enough to build.
 
-"The world does not need more people with plans. It needs people who execute on the days when it is hard. Those are the days that build empires."
-*"The world does not need more people with plans. It needs people who execute on the days when it is hard. Those are the days that build empires."*
+---
 
-Email
-WhatsApp
-Phone
-[✉ Email](mailto:rashidmuhammadamir@gmail.com) · [💬 WhatsApp](https://wa.me/923190091457) · [📞 +92 319 0091457](tel:+923190091457)
+## Pricing (Planned)
 
-</div>
-TRL was born from a real feeling — the feeling of having ambition but no system. Built in public, one day at a time.
+| Plan | Price | Purpose |
+|------|-------|---------|
+| **Free** | $0 | Core features to start |
+| **Pro** | $19/month | Advanced tools |
+| **Empire** | $49/month | The full AI-powered experience |
 
-🤝 Contributing
-TRL is a vision in motion. If you'd like to collaborate, partner, or contribute:
+Early access members receive special pricing.
+
+---
+
+## Leadership
+
+**Rashid Muhammad** — Founder & CEO, TRL
+
+> *"The world does not need more people with plans. It needs people who execute on the days when it is hard. Those are the days that build empires."*
+
 TRL was not born from a boardroom. It was born from a real feeling — having ambition but no system. Built in public, one day at a time, by someone who refused to let ambition stay just a feeling.
 
----
-
-## 🤝 Contributing
-
-Fork the repository
-Create your feature branch (git checkout -b feature/amazing-feature)
-Commit your changes (git commit -m 'Add amazing feature')
-Push to the branch (git push origin feature/amazing-feature)
-Open a Pull Request
-📄 License
-This project is licensed under the MIT License — see the 
-LICENSE
- file for details.
-TRL is a vision in motion. To collaborate, partner, or contribute:
-
-1. Fork the repository
-2. Create your feature branch — `git checkout -b feature/amazing-feature`
-3. Commit your changes — `git commit -m 'Add amazing feature'`
-4. Push to the branch — `git push origin feature/amazing-feature`
-5. Open a Pull Request
-
-For investment or partnership conversations, reach out directly via the contact links above.
+[✉ Email](mailto:rashidmuhammadamir@gmail.com) · [💬 WhatsApp](https://wa.me/923190091457) · [📞 +92 319 0091457](tel:+923190091457)
 
 ---
 
-## 📄 License
+## Contact & Partnerships
+
+- **General & Early Access** — [rashidmuhammadamir@gmail.com](mailto:rashidmuhammadamir@gmail.com)
+- **WhatsApp** — [+92 319 0091457](https://wa.me/923190091457)
+- **Investors & Strategic Partners** — direct outreach to the founder via the channels above
+
+TRL is open to strategic partnerships, early investors, and collaborators who believe in the mission.
+
+---
+
+## License
 
 This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
 
 ---
 
-<div align="center">
-Join the Journey 🚀
-Be part of TRL from Day One.
-
-Get Early Access
-## 🚀 Join the Journey
-
-**Be part of TRL from Day One.**
-
-[Get Early Access](https://therightlifestyle.github.io/TRL-SAAS-WEB/#contact)
-
-Building toward Dubai, UAE 🇦🇪
-
-</div> ```
 **© TRL — The Right Lifestyle. All rights reserved.**
-
-</div>
+*Building toward Dubai, UAE 🇦🇪*
