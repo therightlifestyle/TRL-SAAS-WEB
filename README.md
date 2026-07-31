@@ -147,6 +147,9 @@ TRL is open to strategic partnerships, early investors, and collaborators who be
 
 ![License](https://img.shields.io/badge/License-Proprietary-DC2626?style=for-the-badge)
 
+## License
+
+TRL is proprietary software. **All rights reserved.** No part of this repository may be used, copied, modified, or distributed without prior written permission — see the [LICENSE](LICENSE) file for details.
 ---
 
 **© TRL — The Right Lifestyle. All rights reserved.**
