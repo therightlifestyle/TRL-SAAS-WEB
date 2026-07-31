@@ -422,6 +422,10 @@ section { padding: 90px 24px; }
 .status-building { background:rgba(37,99,235,0.1);color:var(--primary-light);border:1px solid rgba(37,99,235,0.3); }
 .status-coming { background:rgba(245,158,11,0.08);color:var(--gold);border:1px solid rgba(245,158,11,0.3); }
 .status-future { background:rgba(16,185,129,0.08);color:var(--accent);border:1px solid rgba(16,185,129,0.3); }
+.ecosystem-foot { display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:22px;margin-top:36px;padding:22px 26px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);text-align:center; }
+.ef-item { font-size:13px;color:var(--text-muted);line-height:1.5; }
+.ef-strong { color:var(--text);font-weight:700; }
+.ef-div { width:1px;height:34px;background:var(--border); }
 
 /* ── ROADMAP ── */
 .roadmap { margin-top:52px;position:relative;padding-left:8px; }
@@ -463,6 +467,11 @@ section { padding: 90px 24px; }
 .founder-quote { background:rgba(37,99,235,0.06);border:1px solid rgba(37,99,235,0.18);border-left:3px solid var(--primary);border-radius:10px;padding:20px 24px;margin:24px 0; }
 .founder-quote p { font-size:16px;font-weight:600;font-style:italic;color:var(--text);margin:0 0 8px;line-height:1.6; }
 .quote-author { font-size:12px;color:var(--primary-light);font-weight:600; }
+.founder-commit { display:flex;flex-direction:column;gap:12px;margin:8px 0 24px; }
+.commit-item { display:flex;align-items:flex-start;gap:14px;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px 16px; }
+.commit-num { flex-shrink:0;width:30px;height:30px;border-radius:8px;background:var(--gradient);color:#fff;font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center; }
+.commit-item div { font-size:13px;color:var(--text-muted);line-height:1.6; }
+.commit-item strong { color:var(--text); }
 .contact-chips { display:flex;flex-wrap:wrap;gap:10px; }
 .contact-chip { display:inline-flex;align-items:center;gap:7px;background:var(--surface);border:1px solid var(--border);color:var(--text-muted);padding:9px 16px;border-radius:10px;font-size:13px;font-weight:500;text-decoration:none;transition:all 0.3s; }
 .contact-chip:hover { border-color:var(--primary);color:var(--text); }
@@ -577,4 +586,4 @@ footer { background:var(--dark);border-top:1px solid var(--border);padding:52px 
 .momentum-item:hover { border-color: var(--primary); transform: translateY(-3px); }
 .momentum-number { font-size: 34px; font-weight: 900; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; letter-spacing: -1px; margin-bottom: 6px; }
 .momentum-label { font-size: 12px; color: var(--text-muted); font-weight: 500; line-height: 1.5; }
-@media (max-width:560px) { .momentum-grid { grid-template-columns: 1fr; } }
+@media (max-width:560px) { .momentum-grid { grid-template-columns: 1fr; } .ecosystem-foot { flex-direction:column;gap:14px; } .ef-div { display:none; } }
