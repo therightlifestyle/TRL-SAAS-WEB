@@ -5,24 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TRL — The Right Lifestyle</title>
     <meta name="description" content="TRL is building the operating system for ambitious people. Goals, business, AI, education — all in one ecosystem.">
-    <link rel="stylesheet" href="style.css">
+    <meta name="theme-color" content="#060D1F">
+    <link rel="canonical" href="https://therightlifestyle.github.io/TRL-SAAS-WEB/">
+
+    <!-- Social / Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://therightlifestyle.github.io/TRL-SAAS-WEB/">
+    <meta property="og:title" content="TRL — The Right Lifestyle | The Operating System for Ambition">
+    <meta property="og:description" content="TRL is building the operating system for ambitious people. Goals, business, AI, education — all in one ecosystem.">
+    <meta property="og:image" content="https://therightlifestyle.github.io/TRL-SAAS-WEB/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="TRL — The Right Lifestyle | The Operating System for Ambition">
+    <meta name="twitter:description" content="TRL is building the operating system for ambitious people. Goals, business, AI, education — all in one ecosystem.">
+    <meta name="twitter:image" content="https://therightlifestyle.github.io/TRL-SAAS-WEB/og-image.png">
+
+    <!-- Favicon (inline SVG, no extra file needed) -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232563EB'/%3E%3Cstop offset='1' stop-color='%237C3AED'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23g)'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='22' font-weight='900' fill='white' text-anchor='middle'%3ETRL%3C/text%3E%3C/svg%3E">
+
+    <!-- Apply saved system theme before first paint (prevents flash) -->
+    <script>
+        try {
+            var t = localStorage.getItem('trl-theme');
+            if (t === 'light' || (!t && window.matchMedia('(prefers-color-scheme: light)').matches)) {
+                document.documentElement.classList.add('light-mode');
+            }
+        } catch (e) { /* private mode etc. */ }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- If JS is disabled, never trap the page behind the loader -->
+    <noscript><style>.loader, .cursor, .cursor-follower { display: none !important; }</style></noscript>
 </head>
 <body>
 
+    <!-- SKIP LINK -->
+    <a class="skip-link" href="#main">Skip to content</a>
+
     <!-- LOADER -->
-    <div class="loader" id="loader">
+    <div class="loader" id="loader" aria-hidden="true">
         <div class="loader-logo">TRL</div>
         <div class="loader-bar"><div class="loader-fill"></div></div>
         <div class="loader-text">Building the Future...</div>
     </div>
 
     <!-- CURSOR -->
-    <div class="cursor" id="cursor"></div>
-    <div class="cursor-follower" id="cursorFollower"></div>
+    <div class="cursor" id="cursor" aria-hidden="true"></div>
+    <div class="cursor-follower" id="cursorFollower" aria-hidden="true"></div>
 
     <!-- BACK TO TOP -->
-    <button class="back-top" id="backTop" title="Back to top">↑</button>
+    <button class="back-top" id="backTop" title="Back to top" aria-label="Back to top">↑</button>
 
     <!-- NAVBAR -->
     <nav id="navbar">
@@ -37,8 +72,8 @@
             <li><a href="#contact" class="nav-cta">Early Access</a></li>
         </ul>
         <div class="nav-right">
-            <button class="theme-btn" id="themeBtn" title="Toggle theme">🌙</button>
-            <button class="menu-btn" id="menuBtn">☰</button>
+            <button class="theme-btn" id="themeBtn" title="Toggle theme" aria-label="Toggle color theme">🌙</button>
+            <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">☰</button>
         </div>
     </nav>
 
@@ -53,9 +88,11 @@
         <a href="#contact" class="mobile-cta">Get Early Access →</a>
     </div>
 
+    <main id="main">
+
     <!-- HERO -->
     <section class="hero" id="home">
-        <canvas id="particleCanvas"></canvas>
+        <canvas id="particleCanvas" aria-hidden="true"></canvas>
         <div class="hero-bg"></div>
 
         <div class="hero-badge">
@@ -63,7 +100,10 @@
             Building the Future — Join the Journey
         </div>
 
-        <h1>The Operating System<br>for <span class="gradient-text typed-text" id="typedText"></span></h1>
+        <h1>
+            <span aria-hidden="true">The Operating System<br>for <span class="gradient-text typed-text" id="typedText"></span></span>
+            <span class="sr-only">The Operating System for Ambitious People</span>
+        </h1>
 
         <p>TRL is building the platform where goals become reality. Where ambition meets execution. Where your lifestyle is by design, not by default.</p>
 
@@ -79,8 +119,8 @@
 
         <div class="stats">
             <div class="stat">
-                <div class="stat-number counter" data-target="5">0</div>
-                <div class="stat-label">Products in Development</div>
+                <div class="stat-number counter" data-target="6">0</div>
+                <div class="stat-label">Products in the Ecosystem</div>
             </div>
             <div class="stat-divider"></div>
             <div class="stat">
@@ -105,38 +145,42 @@
     <!-- TICKER -->
     <div class="ticker-wrap">
         <div class="ticker">
-            <span>TRL SaaS</span>
-            <span class="ticker-dot">●</span>
-            <span>TRL Academy</span>
-            <span class="ticker-dot">●</span>
-            <span>TRL AI Labs</span>
-            <span class="ticker-dot">●</span>
-            <span>TRL Community</span>
-            <span class="ticker-dot">●</span>
-            <span>TRL Marketplace</span>
-            <span class="ticker-dot">●</span>
-            <span>TRL Ventures</span>
-            <span class="ticker-dot">●</span>
-            <span>Dubai Expansion</span>
-            <span class="ticker-dot">●</span>
-            <span>Global Vision</span>
-            <span class="ticker-dot">●</span>
-            <span>TRL SaaS</span>
-            <span class="ticker-dot">●</span>
-            <span>TRL Academy</span>
-            <span class="ticker-dot">●</span>
-            <span>TRL AI Labs</span>
-            <span class="ticker-dot">●</span>
-            <span>TRL Community</span>
-            <span class="ticker-dot">●</span>
-            <span>TRL Marketplace</span>
-            <span class="ticker-dot">●</span>
-            <span>TRL Ventures</span>
-            <span class="ticker-dot">●</span>
-            <span>Dubai Expansion</span>
-            <span class="ticker-dot">●</span>
-            <span>Global Vision</span>
-            <span class="ticker-dot">●</span>
+            <div class="ticker-group">
+                <span>TRL SaaS</span>
+                <span class="ticker-dot">●</span>
+                <span>TRL Academy</span>
+                <span class="ticker-dot">●</span>
+                <span>TRL AI Labs</span>
+                <span class="ticker-dot">●</span>
+                <span>TRL Community</span>
+                <span class="ticker-dot">●</span>
+                <span>TRL Marketplace</span>
+                <span class="ticker-dot">●</span>
+                <span>TRL Ventures</span>
+                <span class="ticker-dot">●</span>
+                <span>Dubai Expansion</span>
+                <span class="ticker-dot">●</span>
+                <span>Global Vision</span>
+                <span class="ticker-dot">●</span>
+            </div>
+            <div class="ticker-group" aria-hidden="true">
+                <span>TRL SaaS</span>
+                <span class="ticker-dot">●</span>
+                <span>TRL Academy</span>
+                <span class="ticker-dot">●</span>
+                <span>TRL AI Labs</span>
+                <span class="ticker-dot">●</span>
+                <span>TRL Community</span>
+                <span class="ticker-dot">●</span>
+                <span>TRL Marketplace</span>
+                <span class="ticker-dot">●</span>
+                <span>TRL Ventures</span>
+                <span class="ticker-dot">●</span>
+                <span>Dubai Expansion</span>
+                <span class="ticker-dot">●</span>
+                <span>Global Vision</span>
+                <span class="ticker-dot">●</span>
+            </div>
         </div>
     </div>
 
@@ -350,9 +394,9 @@
                         <div class="founder-name">Rashid Muhammad</div>
                         <div class="founder-role">Founder & CEO — TRL</div>
                         <div class="founder-socials">
-                            <a href="mailto:rashidmuhammadamir@gmail.com" class="social-btn" title="Email">✉</a>
-                            <a href="https://wa.me/923190091457" target="_blank" class="social-btn social-wa" title="WhatsApp">💬</a>
-                            <a href="tel:+923190091457" class="social-btn" title="Call">📞</a>
+                            <a href="mailto:rashidmuhammadamir@gmail.com" class="social-btn" title="Email" aria-label="Send email">✉</a>
+                            <a href="https://wa.me/923190091457" target="_blank" rel="noopener noreferrer" class="social-btn social-wa" title="WhatsApp" aria-label="Chat on WhatsApp">💬</a>
+                            <a href="tel:+923190091457" class="social-btn" title="Call" aria-label="Call by phone">📞</a>
                         </div>
                         <div class="founder-bio-card">
                             Building TRL from the ground up. Every day: learning, building, improving. The journey is the proof. The product is the mission made real.
@@ -378,7 +422,7 @@
                         <a href="mailto:rashidmuhammadamir@gmail.com" class="contact-chip">
                             <span>✉</span> rashidmuhammadamir@gmail.com
                         </a>
-                        <a href="https://wa.me/923190091457" target="_blank" class="contact-chip chip-green">
+                        <a href="https://wa.me/923190091457" target="_blank" rel="noopener noreferrer" class="contact-chip chip-green">
                             <span>💬</span> WhatsApp
                         </a>
                         <a href="tel:+923190091457" class="contact-chip">
@@ -400,56 +444,56 @@
             </div>
             <div class="faq-list">
                 <div class="faq-item fade-in">
-                    <div class="faq-question">
+                    <button class="faq-question" id="faq-q1" aria-expanded="false" aria-controls="faq-a1">
                         <span>What is TRL?</span>
-                        <span class="faq-icon">+</span>
-                    </div>
-                    <div class="faq-answer">
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer" id="faq-a1" role="region" aria-labelledby="faq-q1">
                         <p>TRL — The Right Lifestyle — is an operating system for ambitious people. It combines goal tracking, business management, AI guidance, education, and community into one unified platform designed to turn ambition into execution.</p>
                     </div>
                 </div>
                 <div class="faq-item fade-in">
-                    <div class="faq-question">
+                    <button class="faq-question" id="faq-q2" aria-expanded="false" aria-controls="faq-a2">
                         <span>When will TRL launch?</span>
-                        <span class="faq-icon">+</span>
-                    </div>
-                    <div class="faq-answer">
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer" id="faq-a2" role="region" aria-labelledby="faq-q2">
                         <p>TRL is actively being built right now. The first version of the SaaS platform is scheduled for launch within the next 6 months. Sign up for early access to be among the first to use it and shape its development.</p>
                     </div>
                 </div>
                 <div class="faq-item fade-in">
-                    <div class="faq-question">
+                    <button class="faq-question" id="faq-q3" aria-expanded="false" aria-controls="faq-a3">
                         <span>Who is TRL built for?</span>
-                        <span class="faq-icon">+</span>
-                    </div>
-                    <div class="faq-answer">
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer" id="faq-a3" role="region" aria-labelledby="faq-q3">
                         <p>TRL is built for ambitious people — students, entrepreneurs, freelancers, and anyone who wants to build a better life with better systems. If you have goals and want to actually achieve them, TRL is for you.</p>
                     </div>
                 </div>
                 <div class="faq-item fade-in">
-                    <div class="faq-question">
+                    <button class="faq-question" id="faq-q4" aria-expanded="false" aria-controls="faq-a4">
                         <span>Will there be a free version?</span>
-                        <span class="faq-icon">+</span>
-                    </div>
-                    <div class="faq-answer">
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer" id="faq-a4" role="region" aria-labelledby="faq-q4">
                         <p>Yes. TRL will offer a free tier with core features, a Pro plan at $19/month for advanced tools, and an Empire plan at $49/month for the full AI-powered experience. Early access members will receive special pricing.</p>
                     </div>
                 </div>
                 <div class="faq-item fade-in">
-                    <div class="faq-question">
+                    <button class="faq-question" id="faq-q5" aria-expanded="false" aria-controls="faq-a5">
                         <span>How can I get involved or invest?</span>
-                        <span class="faq-icon">+</span>
-                    </div>
-                    <div class="faq-answer">
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer" id="faq-a5" role="region" aria-labelledby="faq-q5">
                         <p>TRL is open to strategic partnerships, early investors, and collaborators who believe in the mission. Reach out directly to Rashid at rashidmuhammadamir@gmail.com or via WhatsApp to start a conversation.</p>
                     </div>
                 </div>
                 <div class="faq-item fade-in">
-                    <div class="faq-question">
+                    <button class="faq-question" id="faq-q6" aria-expanded="false" aria-controls="faq-a6">
                         <span>What makes TRL different?</span>
-                        <span class="faq-icon">+</span>
-                    </div>
-                    <div class="faq-answer">
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer" id="faq-a6" role="region" aria-labelledby="faq-q6">
                         <p>Most tools solve one problem. TRL solves the whole system. Personal growth, business management, AI assistance, education, and community — all connected in one platform. No other product combines all of these for ambitious people specifically.</p>
                     </div>
                 </div>
@@ -479,7 +523,7 @@
                             <div class="info-icon">💬</div>
                             <div class="info-content">
                                 <div class="info-label">WhatsApp</div>
-                                <a href="https://wa.me/923190091457" target="_blank" class="info-value">+92 319 0091457</a>
+                                <a href="https://wa.me/923190091457" target="_blank" rel="noopener noreferrer" class="info-value">+92 319 0091457</a>
                             </div>
                         </div>
                         <div class="info-card">
@@ -500,24 +544,25 @@
                 </div>
 
                 <div class="contact-form-wrap fade-in">
-                    <form class="contact-form" id="contactForm" novalidate>
+                    <!-- ⚠️ Replace YOUR_FORM_ID with your real Formspree form ID (free at https://formspree.io) -->
+                    <form class="contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
                         <div class="form-header">
                             <h3>Send a Message</h3>
                             <p>Typically responds within 24 hours</p>
                         </div>
                         <div class="form-group">
                             <label for="name">Your Name</label>
-                            <input type="text" id="name" placeholder="John Smith" required>
-                            <span class="form-error" id="nameError"></span>
+                            <input type="text" id="name" name="name" placeholder="John Smith" required aria-describedby="nameError">
+                            <span class="form-error" id="nameError" aria-live="polite"></span>
                         </div>
                         <div class="form-group">
                             <label for="email">Email Address</label>
-                            <input type="email" id="email" placeholder="john@example.com" required>
-                            <span class="form-error" id="emailError"></span>
+                            <input type="email" id="email" name="email" placeholder="john@example.com" required aria-describedby="emailError">
+                            <span class="form-error" id="emailError" aria-live="polite"></span>
                         </div>
                         <div class="form-group">
                             <label for="subject">Subject</label>
-                            <select id="subject">
+                            <select id="subject" name="subject">
                                 <option value="">Select a topic...</option>
                                 <option value="early-access">Early Access Request</option>
                                 <option value="investment">Investment Inquiry</option>
@@ -528,15 +573,15 @@
                         </div>
                         <div class="form-group">
                             <label for="message">Message</label>
-                            <textarea id="message" rows="5" placeholder="Tell us about yourself and why you want to connect..." required></textarea>
-                            <span class="form-error" id="messageError"></span>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell us about yourself and why you want to connect..." required aria-describedby="messageError"></textarea>
+                            <span class="form-error" id="messageError" aria-live="polite"></span>
                             <span class="char-count" id="charCount">0 / 500</span>
                         </div>
                         <button type="submit" class="btn-primary submit-btn" id="submitBtn">
                             <span id="btnText">Send Message →</span>
                             <span id="btnLoader" style="display:none;">Sending...</span>
                         </button>
-                        <div class="form-success" id="formSuccess">
+                        <div class="form-success" id="formSuccess" role="status">
                             <span>✅</span>
                             <p>Message sent! Rashid will get back to you soon.</p>
                         </div>
@@ -560,6 +605,8 @@
         </div>
     </section>
 
+    </main>
+
     <!-- FOOTER -->
     <footer>
         <div class="footer-grid container">
@@ -567,9 +614,9 @@
                 <div class="nav-logo">TRL</div>
                 <p>The Operating System for Ambitious People. Building the ecosystem for a better lifestyle through technology, education, and community.</p>
                 <div class="footer-social">
-                    <a href="mailto:rashidmuhammadamir@gmail.com" class="fs-btn">✉</a>
-                    <a href="https://wa.me/923190091457" target="_blank" class="fs-btn">💬</a>
-                    <a href="tel:+923190091457" class="fs-btn">📞</a>
+                    <a href="mailto:rashidmuhammadamir@gmail.com" class="fs-btn" aria-label="Send email">✉</a>
+                    <a href="https://wa.me/923190091457" target="_blank" rel="noopener noreferrer" class="fs-btn" aria-label="Chat on WhatsApp">💬</a>
+                    <a href="tel:+923190091457" class="fs-btn" aria-label="Call by phone">📞</a>
                 </div>
             </div>
             <div class="footer-col">
@@ -594,18 +641,18 @@
                 <h4>Contact</h4>
                 <ul>
                     <li><a href="mailto:rashidmuhammadamir@gmail.com">Email Us</a></li>
-                    <li><a href="https://wa.me/923190091457" target="_blank">WhatsApp</a></li>
+                    <li><a href="https://wa.me/923190091457" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
                     <li><a href="tel:+923190091457">Call Us</a></li>
                     <li><a href="#faq">FAQ</a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom container">
-            <p>© 2025 TRL — The Right Lifestyle. All rights reserved.</p>
+            <p>© <span id="year">2026</span> TRL — The Right Lifestyle. All rights reserved.</p>
             <p>Built by <span>Rashid Muhammad</span> with <span>purpose</span> & <span>ambition</span>.</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
-              </html>
+        </html>
