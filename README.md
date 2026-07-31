@@ -143,8 +143,6 @@ TRL is open to strategic partnerships, early investors, and collaborators who be
 
 ---
 
-## License
-
 ![License](https://img.shields.io/badge/License-Proprietary-DC2626?style=for-the-badge)
 
 ## License
