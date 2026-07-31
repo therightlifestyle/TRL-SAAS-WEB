@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://therightlifestyle.github.io/TRL-SAAS-WEB/sitemap.xml
