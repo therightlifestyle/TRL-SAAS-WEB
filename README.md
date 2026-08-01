@@ -37,9 +37,9 @@ Ambition without infrastructure becomes frustration. Goals live in notes, plans 
 
 ## The Ecosystem — Six Pillars
 
-Each product serves one mission: better lifestyles through better systems.
+TRL is one connected ecosystem of **six standalone, AI-native apps** — each simple to build, simple to use, and powered by AI APIs. One TRL account connects them all into a single stream for your ambition: your goals, learning, and progress flow freely between them.
 
-| Pillar | Description | Status |
+| Pillar | What it is | Status |
 |--------|-------------|--------|
 | 🚀 **TRL SaaS** | The core platform — goals, habits, projects, revenue tracking, and AI guidance in one intelligent workspace | ● In Development |
 | 🎓 **TRL Academy** | Education that connects directly to execution — learn it, then apply it inside TRL | ◎ Coming Soon |
