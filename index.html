@@ -3,689 +3,527 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TRL — The Right Lifestyle</title>
-    <meta name="description" content="TRL is building the operating system for ambitious people. Goals, business, AI, education — all in one ecosystem.">
-    <meta name="theme-color" content="#060D1F">
+    <title>TRL — The Right Lifestyle | Build Your Future With Intelligence</title>
+    <meta name="description" content="TRL is creating the AI-powered operating system for ambitious people — helping you learn faster, build smarter, automate your work, and grow without limits.">
+    <meta name="theme-color" content="#050505">
     <link rel="canonical" href="https://therightlifestyle.github.io/TRL-SAAS-WEB/">
 
     <!-- Social / Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://therightlifestyle.github.io/TRL-SAAS-WEB/">
-    <meta property="og:title" content="TRL — The Right Lifestyle | The Operating System for Ambition">
-    <meta property="og:description" content="TRL is building the operating system for ambitious people. Goals, business, AI, education — all in one ecosystem.">
+    <meta property="og:title" content="TRL — The Right Lifestyle | Build Your Future With Intelligence">
+    <meta property="og:description" content="TRL is creating the AI-powered operating system for ambitious people. Learn faster, build smarter, automate your work, and grow without limits.">
     <meta property="og:image" content="https://therightlifestyle.github.io/TRL-SAAS-WEB/og-image.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="TRL — The Right Lifestyle | The Operating System for Ambition">
-    <meta name="twitter:description" content="TRL is building the operating system for ambitious people. Goals, business, AI, education — all in one ecosystem.">
+    <meta name="twitter:title" content="TRL — The Right Lifestyle | Build Your Future With Intelligence">
+    <meta name="twitter:description" content="TRL is creating the AI-powered operating system for ambitious people.">
     <meta name="twitter:image" content="https://therightlifestyle.github.io/TRL-SAAS-WEB/og-image.png">
 
-    <!-- Favicon (inline SVG, no extra file needed) -->
+    <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232563EB'/%3E%3Cstop offset='1' stop-color='%237C3AED'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23g)'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='22' font-weight='900' fill='white' text-anchor='middle'%3ETRL%3C/text%3E%3C/svg%3E">
 
-    <!-- Apply saved system theme before first paint (prevents flash) -->
-    <script>
-        try {
-            var t = localStorage.getItem('trl-theme');
-            if (t === 'light' || (!t && window.matchMedia('(prefers-color-scheme: light)').matches)) {
-                document.documentElement.classList.add('light-mode');
-            }
-        } catch (e) { /* private mode etc. */ }
-    </script>
-
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-
-    <!-- If JS is disabled, never trap the page behind the loader -->
-   <meta name="google-site-verification" content="5ZbcPRccgvR4IHh7IlTL1ebabj3xChLPvOekkagBs_A" /> <noscript><style>.loader, .cursor, .cursor-follower { display: none !important; }</style></noscript>
-</head>    <!-- Analytics (Umami — free, privacy-friendly). Create a site at cloud.umami.is, then enable by pasting your ID below:
-    <script defer src="https://cloud.umami.is/script.js" data-website-id="YOUR-UMAMI-ID"></script>
-    -->
+</head>
 <body>
 
-    <!-- SKIP LINK -->
+    <!-- Skip Link -->
     <a class="skip-link" href="#main">Skip to content</a>
 
-    <!-- LOADER -->
-    <div class="loader" id="loader" aria-hidden="true">
-        <div class="loader-logo">TRL</div>
-        <div class="loader-bar"><div class="loader-fill"></div></div>
-        <div class="loader-text">Building the Future...</div>
-    </div>
-
-    <!-- CURSOR -->
-    <div class="cursor" id="cursor" aria-hidden="true"></div>
-    <div class="cursor-follower" id="cursorFollower" aria-hidden="true"></div>
-
-    <!-- BACK TO TOP -->
-    <button class="back-top" id="backTop" title="Back to top" aria-label="Back to top">↑</button>
-
-    <!-- NAVBAR -->
+    <!-- Navigation -->
     <nav id="navbar">
-        <div class="nav-logo">TRL</div>
-        <ul class="nav-links">
-            <li><a href="#mission">Mission</a></li>
-            <li><a href="#ecosystem">Ecosystem</a></li>
-            <li><a href="#vision">Vision</a></li>
-            <li><a href="#values">Values</a></li>
-            <li><a href="#founder">Founder</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#contact" class="nav-cta">Early Access</a></li>
-        </ul>
-        <div class="nav-right">
-            <button class="theme-btn" id="themeBtn" title="Toggle theme" aria-label="Toggle color theme">🌙</button>
-            <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">☰</button>
+        <a href="#home" class="nav-logo">TRL</a>
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links" id="navLinks">
+            <a href="#framework">Framework</a>
+            <a href="#today">Today</a>
+            <a href="#future">Future</a>
+            <a href="#mission">Mission</a>
+            <a href="#community">Community</a>
+            <a href="#access" class="nav-cta">Early Access</a>
         </div>
     </nav>
 
-    <!-- MOBILE MENU -->
+    <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
+        <a href="#framework">Framework</a>
+        <a href="#today">Today</a>
+        <a href="#future">Future</a>
         <a href="#mission">Mission</a>
-        <a href="#ecosystem">Ecosystem</a>
-        <a href="#vision">Vision</a>
-        <a href="#values">Values</a>
-        <a href="#founder">Founder</a>
-        <a href="#contact">Contact</a>
-        <a href="#contact" class="mobile-cta">Get Early Access →</a>
+        <a href="#community">Community</a>
+        <a href="#access" class="mobile-cta">Join Early Access</a>
     </div>
 
     <main id="main">
 
-    <!-- HERO -->
-    <section class="hero" id="home">
-        <canvas id="particleCanvas" aria-hidden="true"></canvas>
-        <div class="hero-bg"></div>
-
-        <div class="hero-badge">
-            <span class="badge-dot"></span>
-            Building the Future — Join the Journey
-        </div>
-
-        <h1>
-            <span aria-hidden="true">The Operating System<br>for <span class="gradient-text typed-text" id="typedText"></span></span>
-            <span class="sr-only">The Operating System for Ambitious People</span>
-        </h1>
-
-        <p>TRL is building the platform where goals become reality. Where ambition meets execution. Where your lifestyle is by design, not by default.</p>
-
-        <div class="hero-buttons">
-            <a href="#contact" class="btn-primary">
-                <span>Get Early Access</span>
-                <span class="btn-arrow">→</span>
-            </a>
-            <a href="#ecosystem" class="btn-secondary">
-                Explore Ecosystem
-            </a>
-        </div>
-
-        <div class="stats">
-            <div class="stat">
-                <div class="stat-number counter" data-target="6">0</div>
-                <div class="stat-label">Products in the Ecosystem</div>
-            </div>
-            <div class="stat-divider"></div>
-            <div class="stat">
-                <div class="stat-number">1</div>
-                <div class="stat-label">Mission. One Direction.</div>
-            </div>
-            <div class="stat-divider"></div>
-            <div class="stat">
-                <div class="stat-number">∞</div>
-                <div class="stat-label">Potential for Growth</div>
-            </div>
-        </div>
-
-        <div class="scroll-indicator">
-            <div class="scroll-mouse">
-                <div class="scroll-wheel"></div>
-            </div>
-            <span>Scroll to explore</span>
-        </div>
-    </section>
-
-    <!-- TICKER -->
-    <div class="ticker-wrap">
-        <div class="ticker">
-            <div class="ticker-group">
-                <span>TRL SaaS</span>
-                <span class="ticker-dot">●</span>
-                <span>TRL Academy</span>
-                <span class="ticker-dot">●</span>
-                <span>TRL AI Labs</span>
-                <span class="ticker-dot">●</span>
-                <span>TRL Community</span>
-                <span class="ticker-dot">●</span>
-                <span>TRL Marketplace</span>
-                <span class="ticker-dot">●</span>
-                <span>TRL Ventures</span>
-                <span class="ticker-dot">●</span>
-                <span>Dubai Expansion</span>
-                <span class="ticker-dot">●</span>
-                <span>Global Vision</span>
-                <span class="ticker-dot">●</span>
-            </div>
-            <div class="ticker-group" aria-hidden="true">
-                <span>TRL SaaS</span>
-                <span class="ticker-dot">●</span>
-                <span>TRL Academy</span>
-                <span class="ticker-dot">●</span>
-                <span>TRL AI Labs</span>
-                <span class="ticker-dot">●</span>
-                <span>TRL Community</span>
-                <span class="ticker-dot">●</span>
-                <span>TRL Marketplace</span>
-                <span class="ticker-dot">●</span>
-                <span>TRL Ventures</span>
-                <span class="ticker-dot">●</span>
-                <span>Dubai Expansion</span>
-                <span class="ticker-dot">●</span>
-                <span>Global Vision</span>
-                <span class="ticker-dot">●</span>
-            </div>
-        </div>
-    </div>    <!-- MOMENTUM — update numbers manually as real signups grow -->
-    <section class="momentum" id="momentum">
-        <div class="container">
-            <div class="momentum-grid fade-in">
-                <div class="momentum-item">
-                    <div class="momentum-number">10+</div>
-                    <div class="momentum-label">Builders on the Early Access list</div>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-bg"></div>
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    Building the Foundation
                 </div>
-                <div class="momentum-item">
-                    <div class="momentum-number">6</div>
-                    <div class="momentum-label">Pillars in the TRL Ecosystem</div>
+                <h1>Build Your Future<br><span class="gradient-text">With Intelligence.</span></h1>
+                <p class="hero-subtitle">TRL is creating the AI-powered operating system for ambitious people — helping you learn faster, build smarter, automate your work, and grow without limits.</p>
+                <div class="hero-actions">
+                    <a href="#access" class="btn-primary">
+                        Join Early Access
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                    <a href="#framework" class="btn-secondary">Explore TRL</a>
                 </div>
-                <div class="momentum-item">
-                    <div class="momentum-number">1</div>
-                    <div class="momentum-label">Working prototype — TRL Goals, live today</div>
+                <div class="hero-status">
+                    <span class="status-indicator"></span>
+                    Currently building the foundation.
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- MISSION -->
-    <section class="mission" id="mission">
-        <div class="container">
-            <div class="mission-grid">
-                <div class="mission-content fade-in">
-                    <span class="section-tag">Our Mission</span>
-                    <h2 class="section-title">Turn Ambition Into <span class="gradient-text">Execution</span></h2>
-                    <p>Most people have goals. Most people have dreams. Most people have ambition burning inside them. <strong>What they lack is the system.</strong></p>
-                    <p>TRL exists to give every ambitious person the tools, knowledge, and systems to actually build the life they envision. <strong>Not one day. Starting today.</strong></p>
-                    <p>We are building the bridge between where you are and where you want to be. Technology, education, and community — <strong>all in one ecosystem.</strong></p>
-                    <a href="#ecosystem" class="btn-primary" style="margin-top:12px; display:inline-flex;">Explore How →</a>
-                </div>
-                <div class="mission-cards fade-in">
-                    <div class="mission-card full">
-                        <div class="card-icon">🎯</div>
-                        <div class="card-title">The Problem We Solve</div>
-                        <div class="card-text">92% of people fail to achieve their goals. Not because they lack drive — because they lack the right system. TRL changes that equation permanently.</div>
+            <div class="hero-visual">
+                <div class="visual-container">
+                    <div class="orbit-ring ring-1"></div>
+                    <div class="orbit-ring ring-2"></div>
+                    <div class="orbit-ring ring-3"></div>
+                    <div class="core-orb">
+                        <span>TRL</span>
                     </div>
-                    <div class="mission-card">
-                        <div class="card-icon">⚡</div>
-                        <div class="card-title">Technology</div>
-                        <div class="card-text">AI-powered tools that adapt to your goals and amplify your execution every day.</div>
+                    <div class="satellite sat-1">
+                        <span>AI</span>
                     </div>
-                    <div class="mission-card">
-                        <div class="card-icon">📚</div>
-                        <div class="card-title">Education</div>
-                        <div class="card-text">Real knowledge bridging learning and doing. Applied, not theoretical.</div>
+                    <div class="satellite sat-2">
+                        <span>Systems</span>
+                    </div>
+                    <div class="satellite sat-3">
+                        <span>Knowledge</span>
+                    </div>
+                    <div class="satellite sat-4">
+                        <span>Community</span>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- ECOSYSTEM -->
-    <section id="ecosystem">
-        <div class="container">
-            <div class="section-header fade-in">
-                <span class="section-tag">The Ecosystem</span>
-                <h2 class="section-title">Six Pillars of the <span class="gradient-text">TRL Empire</span></h2>
-                <p class="section-subtitle">Six focused, AI-native apps — each simple to build, simple to use, and powered by AI APIs. One account connects them all into a single stream for your ambition.</p>
-            </div>
-            <div class="ecosystem-grid">
-                <div class="ecosystem-card fade-in" data-tilt>
-                    <div class="card-glow"></div>
-                    <div class="eco-icon">🚀</div>
-                    <div class="eco-title">TRL SaaS</div>
-                    <div class="eco-text">The core platform and your personal/business operating system. Goals, habits, projects, revenue tracking, and AI guidance — all in one intelligent workspace. The hub of the ecosystem.</div>
-                    <span class="eco-status status-building">● In Development</span>
+        <!-- Problem Section -->
+        <section class="problem" id="problem">
+            <div class="container">
+                <div class="problem-header fade-in">
+                    <span class="section-label">The Challenge</span>
+                    <h2>Ambition Without Systems<br><span class="gradient-text">Creates Frustration.</span></h2>
                 </div>
-                <div class="ecosystem-card fade-in" data-tilt>
-                    <div class="card-glow"></div>
-                    <div class="eco-icon">🎓</div>
-                    <div class="eco-title">TRL Academy</div>
-                    <div class="eco-text">A standalone app for professional, practitioner-led education that connects straight to execution. Learn business, marketing, and technology from people who actually do it — then apply it instantly inside TRL. The legit, best-in-class learning engine of the ecosystem.</div>
-                    <span class="eco-status status-coming">◎ Coming Soon</span>
-                </div>
-                <div class="ecosystem-card fade-in" data-tilt>
-                    <div class="card-glow"></div>
-                    <div class="eco-icon">🤖</div>
-                    <div class="eco-title">TRL AI Labs</div>
-                    <div class="eco-text">The intelligence layer, shipped as its own app. AI that knows your goals and patterns, delivering daily personalized guidance to accelerate your growth.</div>
-                    <span class="eco-status status-coming">◎ Coming Soon</span>
-                </div>
-                <div class="ecosystem-card fade-in" data-tilt>
-                    <div class="card-glow"></div>
-                    <div class="eco-icon">🌍</div>
-                    <div class="eco-title">TRL Community</div>
-                    <div class="eco-text">A standalone network app for ambitious people. Accountability, connection, and collaboration with people who refuse to settle.</div>
-                    <span class="eco-status status-building">● Building Now</span>
-                </div>
-                <div class="ecosystem-card fade-in" data-tilt>
-                    <div class="card-glow"></div>
-                    <div class="eco-icon">🛒</div>
-                    <div class="eco-title">TRL Marketplace</div>
-                    <div class="eco-text">A standalone marketplace app. Templates, systems, and tools from successful entrepreneurs — shortcuts that help you execute faster.</div>
-                    <span class="eco-status status-coming">◎ Coming Soon</span>
-                </div>
-                <div class="ecosystem-card fade-in" data-tilt>
-                    <div class="card-glow"></div>
-                    <div class="eco-icon">💼</div>
-                    <div class="eco-title">TRL Ventures</div>
-                    <div class="eco-text">The investment and partnership app of TRL. Backing the next generation of founders building products for better lives.</div>
-                    <span class="eco-status status-future">◈ Future Vision</span>
-                </div>
-            </div>
-            <div class="ecosystem-foot fade-in">
-                <div class="ef-item"><span class="ef-strong">One login.</span> Every pillar shares your TRL identity.</div>
-                <div class="ef-div"></div>
-                <div class="ef-item"><span class="ef-strong">One stream.</span> Goals, learning &amp; progress flow between apps.</div>
-                <div class="ef-div"></div>
-                <div class="ef-item"><span class="ef-strong">AI-native.</span> Each app is lean, fast, API-powered.</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- VISION -->
-    <section class="vision-section" id="vision">
-        <div class="container">
-            <div class="fade-in">
-                <span class="section-tag">The Roadmap</span>
-                <h2 class="section-title">Where TRL Is <span class="gradient-text">Going</span></h2>
-                <p class="section-subtitle">Every empire is built one day at a time. Here is the TRL 5-year vision.</p>
-            </div>
-            <div class="roadmap">
-                <div class="roadmap-item fade-in">
-                    <div class="roadmap-dot active">
-                        <div class="roadmap-pulse"></div>
+                <div class="problem-grid fade-in">
+                    <div class="problem-card">
+                        <div class="problem-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+                        </div>
+                        <h3>Time Wasted</h3>
+                        <p>Hours lost to distractions, procrastination, and unclear priorities. Ambition without direction is just exhaustion.</p>
                     </div>
-                    <div class="roadmap-content">
-                        <div class="roadmap-year">Year 1 — Now</div>
-                        <div class="roadmap-title">Foundation & First Product</div>
-                        <div class="roadmap-text">Building the TRL brand, launching the core SaaS platform, acquiring the first users, and proving that the world needs what TRL is building. The foundation of the empire starts here.</div>
-                        <div class="roadmap-tags">
-                            <span class="r-tag">Brand</span>
-                            <span class="r-tag">SaaS MVP</span>
-                            <span class="r-tag">First Users</span>
+                    <div class="problem-card">
+                        <div class="problem-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                        </div>
+                        <h3>Knowledge Gap</h3>
+                        <p>Information overload without transformation. Learning without execution creates the illusion of progress.</p>
+                    </div>
+                    <div class="problem-card">
+                        <div class="problem-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        </div>
+                        <h3>Isolation</h3>
+                        <p>Building alone means building slower. The most ambitious people need community, accountability, and connection.</p>
+                    </div>
+                    <div class="problem-card">
+                        <div class="problem-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+                        </div>
+                        <h3>No Operating System</h3>
+                        <p>Managing life, business, and growth with scattered tools. Everything works, nothing connects.</p>
+                    </div>
+                </div>
+                <div class="problem-solution fade-in">
+                    <p>TRL exists to solve this. Not with another app. With a complete operating system for your ambition.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Framework Section -->
+        <section class="framework" id="framework">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <span class="section-label">The TRL Framework</span>
+                    <h2>Four Pillars.<br><span class="gradient-text">One Ecosystem.</span></h2>
+                    <p class="section-desc">Every ambitious person needs four things working together. TRL brings them into one intelligent system.</p>
+                </div>
+                <div class="pillars-grid">
+                    <div class="pillar-card fade-in" data-pillar="learn">
+                        <div class="pillar-glow"></div>
+                        <div class="pillar-number">01</div>
+                        <div class="pillar-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                        </div>
+                        <h3>Learn</h3>
+                        <p>Knowledge and education. Not theory — applied learning that connects directly to what you're building.</p>
+                        <div class="pillar-tags">
+                            <span>Courses</span>
+                            <span>Resources</span>
+                            <span>Skills</span>
                         </div>
                     </div>
-                </div>
-                <div class="roadmap-item fade-in">
-                    <div class="roadmap-dot"></div>
-                    <div class="roadmap-content">
-                        <div class="roadmap-year">Year 2</div>
-                        <div class="roadmap-title">Product-Market Fit & Growth</div>
-                        <div class="roadmap-text">Reaching product-market fit with paying customers who love TRL. Building the team, launching TRL Academy, and establishing TRL as a recognized name in the space.</div>
-                        <div class="roadmap-tags">
-                            <span class="r-tag">Revenue</span>
-                            <span class="r-tag">Team</span>
-                            <span class="r-tag">Academy</span>
+                    <div class="pillar-card fade-in" data-pillar="build">
+                        <div class="pillar-glow"></div>
+                        <div class="pillar-number">02</div>
+                        <div class="pillar-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                        </div>
+                        <h3>Build</h3>
+                        <p>Projects, businesses, ideas. Execute with systems designed for creators and entrepreneurs.</p>
+                        <div class="pillar-tags">
+                            <span>Projects</span>
+                            <span>Business</span>
+                            <span>Ideas</span>
                         </div>
                     </div>
-                </div>
-                <div class="roadmap-item fade-in">
-                    <div class="roadmap-dot"></div>
-                    <div class="roadmap-content">
-                        <div class="roadmap-year">Year 3</div>
-                        <div class="roadmap-title">Dubai Expansion & International Reach</div>
-                        <div class="roadmap-text">Establishing TRL's presence in Dubai. Launching Arabic language version. Becoming the go-to platform for ambitious entrepreneurs across the MENA region.</div>
-                        <div class="roadmap-tags">
-                            <span class="r-tag">Dubai</span>
-                            <span class="r-tag">MENA</span>
-                            <span class="r-tag">Arabic</span>
+                    <div class="pillar-card fade-in" data-pillar="automate">
+                        <div class="pillar-glow"></div>
+                        <div class="pillar-number">03</div>
+                        <div class="pillar-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+                        </div>
+                        <h3>Automate</h3>
+                        <p>AI tools and systems. Let technology handle the repetitive so you can focus on what matters.</p>
+                        <div class="pillar-tags">
+                            <span>AI Tools</span>
+                            <span>Workflows</span>
+                            <span>Efficiency</span>
                         </div>
                     </div>
-                </div>
-                <div class="roadmap-item fade-in">
-                    <div class="roadmap-dot"></div>
-                    <div class="roadmap-content">
-                        <div class="roadmap-year">Year 4 — 5</div>
-                        <div class="roadmap-title">Global Ecosystem & TRL Ventures</div>
-                        <div class="roadmap-text">TRL becomes a complete ecosystem. A global community of millions of people building better lifestyles. Marketplace, Ventures, and AI Labs at full power. The empire is complete.</div>
-                        <div class="roadmap-tags">
-                            <span class="r-tag">Global</span>
-                            <span class="r-tag">Ventures</span>
-                            <span class="r-tag">AI Labs</span>
-                            <span class="r-tag">Empire</span>
+                    <div class="pillar-card fade-in" data-pillar="grow">
+                        <div class="pillar-glow"></div>
+                        <div class="pillar-number">04</div>
+                        <div class="pillar-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+                        </div>
+                        <h3>Grow</h3>
+                        <p>Community and opportunities. Connect with people who are building, growing, and pushing boundaries.</p>
+                        <div class="pillar-tags">
+                            <span>Community</span>
+                            <span>Network</span>
+                            <span>Opportunities</span>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- VALUES -->
-    <section id="values">
-        <div class="container">
-            <div class="section-header fade-in">
-                <span class="section-tag">Our Values</span>
-                <h2 class="section-title">What TRL <span class="gradient-text">Stands For</span></h2>
-                <p class="section-subtitle">Not words on a wall. The filters for every decision we make.</p>
+        <!-- TRL Today Section -->
+        <section class="today" id="today">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <span class="section-label">Right Now</span>
+                    <h2>What We Are<br><span class="gradient-text">Building Today</span></h2>
+                    <p class="section-desc">We don't promise the future. We show you what's real.</p>
+                </div>
+                <div class="today-grid">
+                    <div class="today-card fade-in">
+                        <div class="today-header">
+                            <div class="today-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+                            </div>
+                            <span class="status-badge active">Building</span>
+                        </div>
+                        <h3>TRL AI Automation</h3>
+                        <p>Helping businesses use AI systems to streamline operations, reduce manual work, and scale intelligently.</p>
+                        <div class="today-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 70%"></div>
+                            </div>
+                            <span>70% Complete</span>
+                        </div>
+                    </div>
+                    <div class="today-card fade-in">
+                        <div class="today-header">
+                            <div class="today-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                            </div>
+                            <span class="status-badge active">Growing</span>
+                        </div>
+                        <h3>TRL Community</h3>
+                        <p>Connecting ambitious builders who refuse to settle. Accountability, collaboration, and real relationships.</p>
+                        <div class="today-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 85%"></div>
+                            </div>
+                            <span>85% Complete</span>
+                        </div>
+                    </div>
+                    <div class="today-card fade-in">
+                        <div class="today-header">
+                            <div class="today-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                            </div>
+                            <span class="status-badge planning">Planning</span>
+                        </div>
+                        <h3>TRL OS Foundation</h3>
+                        <p>Building personal and business operating systems. The core platform everything else connects to.</p>
+                        <div class="today-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 40%"></div>
+                            </div>
+                            <span>40% Complete</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="values-grid">
-                <div class="value-card fade-in">
-                    <div class="value-number">01</div>
-                    <div class="value-title">Execution Over Perfection</div>
-                    <div class="value-text">Done and learning beats perfect and waiting. We build, we ship, we improve. Progress is the only direction we move.</div>
-                </div>
-                <div class="value-card fade-in">
-                    <div class="value-number">02</div>
-                    <div class="value-title">Radical Honesty</div>
-                    <div class="value-text">We tell the truth. To our users, to our team, and to ourselves. No spin. No shortcuts. Integrity is the foundation of trust.</div>
-                </div>
-                <div class="value-card fade-in">
-                    <div class="value-number">03</div>
-                    <div class="value-title">User Obsession</div>
-                    <div class="value-text">Every feature, every decision, every word starts with one question: Is this genuinely good for our user?</div>
-                </div>
-                <div class="value-card fade-in">
-                    <div class="value-number">04</div>
-                    <div class="value-title">Ownership Mentality</div>
-                    <div class="value-text">We own our outcomes. No excuses. No blaming circumstances. See a problem, solve it. That is how empires are built.</div>
-                </div>
-                <div class="value-card fade-in">
-                    <div class="value-number">05</div>
-                    <div class="value-title">Continuous Learning</div>
-                    <div class="value-text">We are always studying. The industry, our users, ourselves. The company grows as the founder grows. Always.</div>
-                </div>
-                <div class="value-card fade-in">
-                    <div class="value-number">06</div>
-                    <div class="value-title">Ambition With Humility</div>
-                    <div class="value-text">We think in decades and act with urgency. Big vision, open mind. Humble enough to learn. Bold enough to build.</div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- FOUNDER -->
-    <section class="founder-section" id="founder">
-        <div class="container">
-            <div class="founder-grid">
-                <div class="founder-visual fade-in">
-                    <div class="founder-card">
-                        <div class="founder-card-top"></div>
-                        <div class="founder-avatar">RM</div>
-                        <div class="founder-name">Rashid Muhammad</div>
-                        <div class="founder-role">Founder & CEO — TRL</div>
-                        <div class="founder-socials">
-                            <a href="mailto:rashidmuhammadamir@gmail.com" class="social-btn" title="Email" aria-label="Send email">✉</a>
-                            <a href="https://wa.me/923190091457" target="_blank" rel="noopener noreferrer" class="social-btn social-wa" title="WhatsApp" aria-label="Chat on WhatsApp">💬</a>
-                            <a href="tel:+923190091457" class="social-btn" title="Call" aria-label="Call by phone">📞</a>
+        <!-- Future Ecosystem Section -->
+        <section class="future" id="future">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <span class="section-label">The Roadmap</span>
+                    <h2>The TRL <span class="gradient-text">Universe</span></h2>
+                    <p class="section-desc">One vision. Four phases. A complete ecosystem for ambitious people.</p>
+                </div>
+                <div class="phases">
+                    <div class="phase fade-in" data-phase="1">
+                        <div class="phase-marker">
+                            <div class="phase-dot active"></div>
+                            <div class="phase-line"></div>
                         </div>
-                        <div class="founder-bio-card">
-                            Building TRL from the ground up. Every day: learning, building, improving. The journey is the proof. The product is the mission made real.
+                        <div class="phase-content">
+                            <span class="phase-label">Phase 1</span>
+                            <h3>Foundation</h3>
+                            <p>The essential building blocks. Establishing the brand, building core services, and onboarding the first users who will help shape everything.</p>
+                            <div class="phase-items">
+                                <span>Community</span>
+                                <span>Services</span>
+                                <span>Early Users</span>
+                            </div>
                         </div>
-                        <div class="founder-tags">
-                            <span class="f-tag">Founder</span>
-                            <span class="f-tag">Builder</span>
-                            <span class="f-tag">Visionary</span>
+                    </div>
+                    <div class="phase fade-in" data-phase="2">
+                        <div class="phase-marker">
+                            <div class="phase-dot"></div>
+                            <div class="phase-line"></div>
+                        </div>
+                        <div class="phase-content">
+                            <span class="phase-label">Phase 2</span>
+                            <h3>Intelligence</h3>
+                            <p>Building the AI layer. Personal AI assistant that learns your patterns, business AI systems that automate the complex.</p>
+                            <div class="phase-items">
+                                <span>TRL AI</span>
+                                <span>Personal Assistant</span>
+                                <span>Business Systems</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="phase fade-in" data-phase="3">
+                        <div class="phase-marker">
+                            <div class="phase-dot"></div>
+                            <div class="phase-line"></div>
+                        </div>
+                        <div class="phase-content">
+                            <span class="phase-label">Phase 3</span>
+                            <h3>Platform</h3>
+                            <p>The complete TRL OS. Academy for structured learning, marketplace for tools and templates, all connected into one unified experience.</p>
+                            <div class="phase-items">
+                                <span>TRL OS</span>
+                                <span>Academy</span>
+                                <span>Marketplace</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="phase fade-in" data-phase="4">
+                        <div class="phase-marker">
+                            <div class="phase-dot"></div>
+                        </div>
+                        <div class="phase-content">
+                            <span class="phase-label">Phase 4</span>
+                            <h3>Global Expansion</h3>
+                            <p>Taking TRL worldwide. Establishing presence in key markets, building a global community of ambitious builders.</p>
+                            <div class="phase-items">
+                                <span>Dubai</span>
+                                <span>Worldwide Community</span>
+                                <span>Global Reach</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="founder-content fade-in">
-                    <span class="section-tag">The Founder</span>
-                    <h2 class="section-title">Built by Someone Who <span class="gradient-text">Refused to Wait</span></h2>
-                    <p>TRL was not born in a boardroom or a business-school case study. It was born from a feeling almost everyone knows: the ambition is there, the vision is clear — but the system to actually get there does not exist. So I built the one I wished I had.</p>
-                    <p>That feeling became a decision. The decision became a discipline. And the discipline became TRL — a real product, shipped in public, improved every single day. No venture capital required to begin. No permission needed to start.</p>
-                    <p>I am not building this to look busy. I am building it because the gap between ambition and execution is the one problem worth solving — for me, and for everyone who has ever felt stuck with a dream and no map. TRL is that map, made real one commit at a time.</p>
-                    <div class="founder-commit">
-                        <div class="commit-item"><span class="commit-num">01</span><div><strong>Built in public.</strong> Real progress, shared openly — not promises.</div></div>
-                        <div class="commit-item"><span class="commit-num">02</span><div><strong>One builder, total ownership.</strong> No excuses. Every outcome is mine to deliver.</div></div>
-                        <div class="commit-item"><span class="commit-num">03</span><div><strong>You're backed.</strong> Join TRL and you get a system — and a founder who has your back.</div></div>
+            </div>
+        </section>
+
+        <!-- Mission Section -->
+        <section class="mission" id="mission">
+            <div class="container">
+                <div class="mission-grid">
+                    <div class="mission-content fade-in">
+                        <span class="section-label">Our Mission</span>
+                        <h2>Built From<br><span class="gradient-text">A Mission.</span></h2>
+                        <p>TRL was created because millions of ambitious people have dreams but lack the right systems to make them real.</p>
+                        <p>The mission is simple: Give people access to the tools, knowledge, and technology needed to create a better future.</p>
+                        <p>This isn't about building another app. It's about building the infrastructure for human ambition.</p>
+                        <a href="#access" class="btn-primary">Join the Mission</a>
                     </div>
-                    <div class="founder-quote">
-                        <p>"The world does not need more people with plans. It needs people who execute on the days when it is hard. Those are the days that build empires."</p>
-                        <div class="quote-author">— Rashid Muhammad, Founder of TRL</div>
+                    <div class="mission-visual fade-in">
+                        <div class="mission-card">
+                            <div class="mission-card-inner">
+                                <div class="founder-initials">RM</div>
+                                <h4>Rashid Muhammad</h4>
+                                <span class="founder-title">Founder</span>
+                            </div>
+                            <p class="mission-quote">"The gap between ambition and execution is the problem worth solving."</p>
+                            <div class="mission-contacts">
+                                <a href="mailto:rashidmuhammadamir@gmail.com" class="contact-link">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                                    Email
+                                </a>
+                                <a href="https://wa.me/923190091457" target="_blank" class="contact-link">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                                    WhatsApp
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="contact-chips">
-                        <a href="mailto:rashidmuhammadamir@gmail.com" class="contact-chip">
-                            <span>✉</span> rashidmuhammadamir@gmail.com
-                        </a>
-                        <a href="https://wa.me/923190091457" target="_blank" rel="noopener noreferrer" class="contact-chip chip-green">
-                            <span>💬</span> WhatsApp
-                        </a>
-                        <a href="tel:+923190091457" class="contact-chip">
-                            <span>📞</span> +92 319 0091457
+                </div>
+            </div>
+        </section>
+
+        <!-- Community Section -->
+        <section class="community" id="community">
+            <div class="container">
+                <div class="community-content fade-in">
+                    <span class="section-label">Join The First Builders</span>
+                    <h2>Be Part Of<br><span class="gradient-text">Something Early.</span></h2>
+                    <p>Early members will help shape the future ecosystem. Not just users — co-creators. Your feedback, ideas, and energy will influence what TRL becomes.</p>
+                    <div class="community-actions">
+                        <a href="#access" class="btn-primary">
+                            Join TRL Community
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                         </a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- FAQ -->
-    <section id="faq">
-        <div class="container">
-            <div class="section-header fade-in">
-                <span class="section-tag">FAQ</span>
-                <h2 class="section-title">Questions <span class="gradient-text">Answered</span></h2>
-                <p class="section-subtitle">Everything you want to know about TRL.</p>
-            </div>
-            <div class="faq-list">
-                <div class="faq-item fade-in">
-                    <button class="faq-question" id="faq-q1" aria-expanded="false" aria-controls="faq-a1">
-                        <span>What is TRL?</span>
-                        <span class="faq-icon" aria-hidden="true">+</span>
-                    </button>
-                    <div class="faq-answer" id="faq-a1" role="region" aria-labelledby="faq-q1">
-                        <p>TRL — The Right Lifestyle — is an operating system for ambitious people. It combines goal tracking, business management, AI guidance, education, and community into one unified platform designed to turn ambition into execution.</p>
-                    </div>
-                </div>
-                <div class="faq-item fade-in">
-                    <button class="faq-question" id="faq-q2" aria-expanded="false" aria-controls="faq-a2">
-                        <span>When will TRL launch?</span>
-                        <span class="faq-icon" aria-hidden="true">+</span>
-                    </button>
-                    <div class="faq-answer" id="faq-a2" role="region" aria-labelledby="faq-q2">
-                        <p>TRL is actively being built right now. The first version of the SaaS platform is scheduled for launch within the next 6 months. Sign up for early access to be among the first to use it and shape its development.</p>
-                    </div>
-                </div>
-                <div class="faq-item fade-in">
-                    <button class="faq-question" id="faq-q3" aria-expanded="false" aria-controls="faq-a3">
-                        <span>Who is TRL built for?</span>
-                        <span class="faq-icon" aria-hidden="true">+</span>
-                    </button>
-                    <div class="faq-answer" id="faq-a3" role="region" aria-labelledby="faq-q3">
-                        <p>TRL is built for ambitious people — students, entrepreneurs, freelancers, and anyone who wants to build a better life with better systems. If you have goals and want to actually achieve them, TRL is for you.</p>
-                    </div>
-                </div>
-                <div class="faq-item fade-in">
-                    <button class="faq-question" id="faq-q4" aria-expanded="false" aria-controls="faq-a4">
-                        <span>Will there be a free version?</span>
-                        <span class="faq-icon" aria-hidden="true">+</span>
-                    </button>
-                    <div class="faq-answer" id="faq-a4" role="region" aria-labelledby="faq-q4">
-                        <p>Yes. TRL will offer a free tier with core features, a Pro plan at $19/month for advanced tools, and an Empire plan at $49/month for the full AI-powered experience. Early access members will receive special pricing.</p>
-                    </div>
-                </div>
-                <div class="faq-item fade-in">
-                    <button class="faq-question" id="faq-q5" aria-expanded="false" aria-controls="faq-a5">
-                        <span>How can I get involved or invest?</span>
-                        <span class="faq-icon" aria-hidden="true">+</span>
-                    </button>
-                    <div class="faq-answer" id="faq-a5" role="region" aria-labelledby="faq-q5">
-                        <p>TRL is open to strategic partnerships, early investors, and collaborators who believe in the mission. Reach out directly to Rashid at rashidmuhammadamir@gmail.com or via WhatsApp to start a conversation.</p>
-                    </div>
-                </div>
-                <div class="faq-item fade-in">
-                    <button class="faq-question" id="faq-q6" aria-expanded="false" aria-controls="faq-a6">
-                        <span>What makes TRL different?</span>
-                        <span class="faq-icon" aria-hidden="true">+</span>
-                    </button>
-                    <div class="faq-answer" id="faq-a6" role="region" aria-labelledby="faq-q6">
-                        <p>Most tools solve one problem. TRL solves the whole system. Personal growth, business management, AI assistance, education, and community — all connected in one platform. No other product combines all of these for ambitious people specifically.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="contact-section" id="contact">
-        <div class="container">
-            <div class="contact-grid">
-                <div class="contact-info fade-in">
-                    <span class="section-tag">Get In Touch</span>
-                    <h2 class="section-title">Let's Build <span class="gradient-text">Together</span></h2>
-                    <p style="color:var(--text-muted); font-size:16px; line-height:1.8; margin-bottom:32px;">
-                        Whether you want early access, to collaborate, invest, or just say hello — the door is always open. TRL is built on real connections.
-                    </p>
-                    <div class="info-cards">
-                        <div class="info-card">
-                            <div class="info-icon">✉</div>
-                            <div class="info-content">
-                                <div class="info-label">Email</div>
-                                <a href="mailto:rashidmuhammadamir@gmail.com" class="info-value">rashidmuhammadamir@gmail.com</a>
+        <!-- Early Access / Contact Section -->
+        <section class="access" id="access">
+            <div class="container">
+                <div class="access-grid">
+                    <div class="access-info fade-in">
+                        <span class="section-label">Get Started</span>
+                        <h2>Request<br><span class="gradient-text">Early Access</span></h2>
+                        <p>Join the first builders shaping TRL. Whether you're interested in AI automation, community, the platform, or partnership — we want to hear from you.</p>
+                        <div class="access-benefits">
+                            <div class="benefit">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                                <span>Shape the product direction</span>
                             </div>
-                        </div>
-                        <div class="info-card">
-                            <div class="info-icon">💬</div>
-                            <div class="info-content">
-                                <div class="info-label">WhatsApp</div>
-                                <a href="https://wa.me/923190091457" target="_blank" rel="noopener noreferrer" class="info-value">+92 319 0091457</a>
+                            <div class="benefit">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                                <span>Early access to new features</span>
                             </div>
-                        </div>
-                        <div class="info-card">
-                            <div class="info-icon">📞</div>
-                            <div class="info-content">
-                                <div class="info-label">Phone</div>
-                                <a href="tel:+923190091457" class="info-value">+92 319 0091457</a>
+                            <div class="benefit">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                                <span>Direct line to the founder</span>
                             </div>
-                        </div>
-                        <div class="info-card">
-                            <div class="info-icon">📍</div>
-                            <div class="info-content">
-                                <div class="info-label">Building Toward</div>
-                                <div class="info-value">Dubai, UAE 🇦🇪</div>
+                            <div class="benefit">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                                <span>Founding member pricing</span>
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="contact-form-wrap fade-in">
-                    <!-- ⚠️ Replace YOUR_FORM_ID with your real Formspree form ID (free at https://formspree.io) -->
-                    <form class="contact-form" id="contactForm" action="https://formspree.io/f/xjgnqbkg" method="POST" novalidate>
-                        <div class="form-header">
-                            <h3>Send a Message</h3>
-                            <p>Typically responds within 24 hours</p>
-                        </div>
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name" name="name" placeholder="John Smith" required aria-describedby="nameError">
-                            <span class="form-error" id="nameError" aria-live="polite"></span>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" placeholder="john@example.com" required aria-describedby="emailError">
-                            <span class="form-error" id="emailError" aria-live="polite"></span>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <select id="subject" name="subject">
-                                <option value="">Select a topic...</option>
-                                <option value="early-access">Early Access Request</option>
-                                <option value="investment">Investment Inquiry</option>
-                                <option value="partnership">Partnership Opportunity</option>
-                                <option value="general">General Question</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" placeholder="Tell us about yourself and why you want to connect..." required aria-describedby="messageError"></textarea>
-                            <span class="form-error" id="messageError" aria-live="polite"></span>
-                            <span class="char-count" id="charCount">0 / 500</span>
-                        </div>
-                        <button type="submit" class="btn-primary submit-btn" id="submitBtn">
-                            <span id="btnText">Send Message →</span>
-                            <span id="btnLoader" style="display:none;">Sending...</span>
-                        </button>
-                        <div class="form-success" id="formSuccess" role="status">
-                            <span>✅</span>
-                            <p>Message sent! Rashid will get back to you soon.</p>
-                        </div>
-                    </form>
+                    <div class="access-form-wrap fade-in">
+                        <form class="access-form" id="accessForm" action="https://formspree.io/f/xjgnqbkg" method="POST">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" placeholder="John Smith" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="interest">Primary Interest</label>
+                                <select id="interest" name="interest">
+                                    <option value="">Select your interest...</option>
+                                    <option value="ai-automation">AI Automation</option>
+                                    <option value="community">Community</option>
+                                    <option value="platform">TRL Platform</option>
+                                    <option value="partnership">Partnership</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Tell Us About Yourself</label>
+                                <textarea id="message" name="message" rows="4" placeholder="What are you building? What do you hope to find in TRL?"></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary submit-btn">
+                                <span id="btnText">Request Access</span>
+                                <span id="btnLoader" style="display:none;">Sending...</span>
+                            </button>
+                            <div class="form-success" id="formSuccess">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                                <p>Request received! We'll be in touch soon.</p>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- CTA BANNER -->
-    <section class="cta-section">
-        <div class="cta-bg"></div>
-        <div class="cta-content">
-            <span class="section-tag">Join the Journey</span>
-            <h2 class="section-title fade-in">Be Part of TRL <span class="gradient-text">From Day One</span></h2>
-            <p class="section-subtitle fade-in" style="margin: 0 auto 40px;">The TRL platform is being built right now. Get early access and be among the first to experience what TRL will become.</p>
-            <div class="hero-buttons fade-in">
-                <a href="#contact" class="btn-primary">Get Early Access →</a>
-                <a href="#ecosystem" class="btn-secondary">Learn More</a>
-            </div>
-        </div>
-    </section>
+        </section>
 
     </main>
 
-    <!-- FOOTER -->
+    <!-- Footer -->
     <footer>
-        <div class="footer-grid container">
-            <div class="footer-brand">
-                <div class="nav-logo">TRL</div>
-                <p>The Operating System for Ambitious People. Building the ecosystem for a better lifestyle through technology, education, and community.</p>
-                <div class="footer-social">
-                    <a href="mailto:rashidmuhammadamir@gmail.com" class="fs-btn" aria-label="Send email">✉</a>
-                    <a href="https://wa.me/923190091457" target="_blank" rel="noopener noreferrer" class="fs-btn" aria-label="Chat on WhatsApp">💬</a>
-                    <a href="tel:+923190091457" class="fs-btn" aria-label="Call by phone">📞</a>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#home" class="nav-logo">TRL</a>
+                    <p>The Right Lifestyle. Building the operating system for ambitious people.</p>
+                    <div class="footer-social">
+                        <a href="mailto:rashidmuhammadamir@gmail.com" aria-label="Email">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </a>
+                        <a href="https://wa.me/923190091457" target="_blank" aria-label="WhatsApp">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigate</h4>
+                    <ul>
+                        <li><a href="#framework">Framework</a></li>
+                        <li><a href="#today">Today</a></li>
+                        <li><a href="#future">Future</a></li>
+                        <li><a href="#mission">Mission</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="#access">Early Access</a></li>
+                        <li><a href="#community">Community</a></li>
+                        <li><a href="mailto:rashidmuhammadamir@gmail.com">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="app.html">TRL Goals</a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="footer-col">
-                <h4>Company</h4>
-                <ul>
-                    <li><a href="#mission">Mission</a></li>
-                    <li><a href="#vision">Vision</a></li>
-                    <li><a href="#values">Values</a></li>
-                    <li><a href="#founder">Founder</a></li>
-                </ul>
+            <div class="footer-bottom">
+                <p>&copy; <span id="year">2026</span> TRL — The Right Lifestyle. All rights reserved.</p>
+                <p>Building with purpose.</p>
             </div>
-            <div class="footer-col">
-                <h4>Ecosystem</h4>
-                <ul>
-                    <li><a href="#ecosystem">TRL SaaS</a></li>
-                    <li><a href="#ecosystem">TRL Academy</a></li>
-                    <li><a href="#ecosystem">TRL AI Labs</a></li>
-                    <li><a href="#ecosystem">TRL Community</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Contact</h4>
-                <ul>
-                    <li><a href="mailto:rashidmuhammadamir@gmail.com">Email Us</a></li>
-                    <li><a href="https://wa.me/923190091457" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
-                    <li><a href="tel:+923190091457">Call Us</a></li>
-                    <li><a href="#faq">FAQ</a></li>                    <li><a href="privacy.html">Privacy Policy</a></li>
-                    <li><a href="app.html">TRL Goals — Prototype</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom container">
-            <p>© <span id="year">2026</span> TRL — The Right Lifestyle. All rights reserved.</p>
-            <p>Built by <span>Rashid Muhammad</span> with <span>purpose</span> & <span>ambition</span>.</p>
         </div>
     </footer>
 
-    <script src="script.js" defer></script>
+    <script src="script.js"></script>
 </body>
-        </html>
+</html>
