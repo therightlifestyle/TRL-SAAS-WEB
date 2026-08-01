@@ -530,12 +530,99 @@ nav {
     animation: orbit 18s linear infinite reverse;
 }
 
-/* ── Problem Section ── */
-.problem {
+/* ── Today Section ── */
+.today {
     padding: var(--space-3xl) 0;
     background: var(--dark);
     border-top: 1px solid rgba(255, 255, 255, 0.05);
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.today-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+}
+
+.today-card {
+    background: rgba(17, 24, 39, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-xl);
+    padding: var(--space-lg);
+    transition: var(--transition-base);
+}
+
+.today-card:hover {
+    border-color: rgba(37, 99, 235, 0.3);
+}
+
+.today-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--space-md);
+}
+
+.today-icon {
+    width: 44px;
+    height: 44px;
+    background: rgba(37, 99, 235, 0.1);
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-light);
+}
+
+.status-badge {
+    font-size: 11px;
+    font-weight: var(--font-weight-semibold);
+    padding: 4px 10px;
+    border-radius: var(--radius-full);
+}
+
+.status-badge.active {
+    background: rgba(16, 185, 129, 0.1);
+    color: #10B981;
+    border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.status-badge.planning {
+    background: rgba(245, 158, 11, 0.1);
+    color: #F59E0B;
+    border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+.today-card h3 {
+    font-size: 18px;
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--space-xs);
+}
+
+.today-card p {
+    font-size: 14px;
+    color: var(--gray-400);
+    line-height: 1.6;
+    margin-bottom: var(--space-md);
+}
+
+.today-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    font-weight: var(--font-weight-semibold);
+    color: var(--accent-light);
+    transition: gap var(--transition-fast);
+}
+
+.today-link:hover {
+    gap: 10px;
+}
+
+/* ── Problem Section ── */
+.problem {
+    padding: var(--space-3xl) 0;
 }
 
 .problem-header {
@@ -610,6 +697,9 @@ nav {
 /* ── Framework Section ── */
 .framework {
     padding: var(--space-3xl) 0;
+    background: var(--dark);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .pillars-grid {
@@ -697,7 +787,7 @@ nav {
     margin-bottom: var(--space-xs);
 }
 
-.pillar-card p {
+.pillar-card > p {
     font-size: 14px;
     color: var(--gray-400);
     line-height: 1.6;
@@ -720,112 +810,81 @@ nav {
     color: var(--accent-light);
 }
 
-/* ── Today Section ── */
-.today {
+/* ── Progress Section ── */
+.progress {
     padding: var(--space-3xl) 0;
-    background: var(--dark);
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.today-grid {
+.progress-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-lg);
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.today-card {
+.progress-card {
+    display: flex;
+    gap: var(--space-md);
+    align-items: flex-start;
     background: rgba(17, 24, 39, 0.5);
     border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: var(--radius-xl);
+    border-radius: var(--radius-lg);
     padding: var(--space-lg);
     transition: var(--transition-base);
 }
 
-.today-card:hover {
-    border-color: rgba(37, 99, 235, 0.3);
+.progress-card:hover {
+    border-color: rgba(37, 99, 235, 0.2);
 }
 
-.today-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: var(--space-md);
-}
-
-.today-icon {
+.progress-icon {
     width: 44px;
     height: 44px;
-    background: rgba(37, 99, 235, 0.1);
     border-radius: var(--radius-sm);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--accent-light);
+    flex-shrink: 0;
 }
 
-.status-badge {
-    font-size: 11px;
-    font-weight: var(--font-weight-semibold);
-    padding: 4px 10px;
-    border-radius: var(--radius-full);
-}
-
-.status-badge.active {
+.progress-icon.complete {
     background: rgba(16, 185, 129, 0.1);
     color: #10B981;
     border: 1px solid rgba(16, 185, 129, 0.2);
 }
 
-.status-badge.planning {
-    background: rgba(245, 158, 11, 0.1);
-    color: #F59E0B;
-    border: 1px solid rgba(245, 158, 11, 0.2);
+.progress-icon.active {
+    background: rgba(37, 99, 235, 0.1);
+    color: var(--accent-light);
+    border: 1px solid rgba(37, 99, 235, 0.2);
+    animation: pulse 2s infinite;
 }
 
-.today-card h3 {
-    font-size: 18px;
+.progress-icon.upcoming {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--gray-400);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.progress-content h3 {
+    font-size: 16px;
     font-weight: var(--font-weight-bold);
-    margin-bottom: var(--space-xs);
+    margin-bottom: 4px;
 }
 
-.today-card p {
+.progress-content p {
     font-size: 14px;
     color: var(--gray-400);
-    line-height: 1.6;
-    margin-bottom: var(--space-md);
-}
-
-.today-progress {
-    display: flex;
-    align-items: center;
-    gap: var(--space-sm);
-}
-
-.progress-bar {
-    flex: 1;
-    height: 4px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 2px;
-    overflow: hidden;
-}
-
-.progress-fill {
-    height: 100%;
-    background: var(--gradient);
-    border-radius: 2px;
-    transition: width 1s ease;
-}
-
-.today-progress span {
-    font-size: 12px;
-    color: var(--gray-400);
-    white-space: nowrap;
+    line-height: 1.5;
 }
 
 /* ── Future Section ── */
 .future {
     padding: var(--space-3xl) 0;
+    background: var(--dark);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .phases {
@@ -920,9 +979,6 @@ nav {
 /* ── Mission Section ── */
 .mission {
     padding: var(--space-3xl) 0;
-    background: var(--dark);
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .mission-grid {
@@ -940,11 +996,18 @@ nav {
     margin-bottom: var(--space-md);
 }
 
-.mission-content p {
+.mission-story {
+    font-size: 20px;
+    font-weight: var(--font-weight-bold);
+    color: var(--gray-100);
+    margin-bottom: var(--space-md);
+}
+
+.mission-content > p {
     font-size: 16px;
     color: var(--gray-400);
     line-height: 1.7;
-    margin-bottom: var(--space-md);
+    margin-bottom: var(--space-sm);
 }
 
 .mission-visual {
@@ -1031,6 +1094,9 @@ nav {
 /* ── Community Section ── */
 .community {
     padding: var(--space-3xl) 0;
+    background: var(--dark);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .community-content {
@@ -1047,7 +1113,7 @@ nav {
     margin-bottom: var(--space-md);
 }
 
-.community-content p {
+.community-content > p {
     font-size: 18px;
     color: var(--gray-400);
     line-height: 1.7;
@@ -1062,8 +1128,6 @@ nav {
 /* ── Access Section ── */
 .access {
     padding: var(--space-3xl) 0;
-    background: var(--dark);
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .access-grid {
@@ -1117,6 +1181,12 @@ nav {
 .access-form {
     display: flex;
     flex-direction: column;
+    gap: var(--space-md);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: var(--space-md);
 }
 
@@ -1355,18 +1425,14 @@ footer {
         display: none;
     }
     
-    .mission-grid {
+    .mission-grid,
+    .access-grid {
         grid-template-columns: 1fr;
         gap: var(--space-2xl);
     }
     
     .mission-visual {
         order: -1;
-    }
-    
-    .access-grid {
-        grid-template-columns: 1fr;
-        gap: var(--space-2xl);
     }
     
     .footer-grid {
@@ -1376,6 +1442,14 @@ footer {
     
     .footer-brand {
         grid-column: span 2;
+    }
+    
+    .progress-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
     }
 }
 
