@@ -1091,12 +1091,66 @@ nav {
     border-color: rgba(255, 255, 255, 0.2);
 }
 
-/* ── Community Section ── */
-.community {
+/* ── Why Join Section ── */
+.why-join {
     padding: var(--space-3xl) 0;
     background: var(--dark);
     border-top: 1px solid rgba(255, 255, 255, 0.05);
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-md);
+    margin-bottom: var(--space-2xl);
+}
+
+.why-card {
+    background: rgba(17, 24, 39, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-xl);
+    padding: var(--space-lg);
+    transition: var(--transition-base);
+}
+
+.why-card:hover {
+    border-color: rgba(37, 99, 235, 0.3);
+    transform: translateY(-4px);
+}
+
+.why-number {
+    font-size: 36px;
+    font-weight: var(--font-weight-extrabold);
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+    margin-bottom: var(--space-md);
+    letter-spacing: -2px;
+}
+
+.why-card h3 {
+    font-size: 17px;
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--space-xs);
+}
+
+.why-card p {
+    font-size: 14px;
+    color: var(--gray-400);
+    line-height: 1.6;
+}
+
+.why-cta {
+    text-align: center;
+}
+
+/* ── Community Section ── */
+.community {
+    padding: var(--space-3xl) 0;
+    background: var(--black);
 }
 
 .community-content {
@@ -1388,7 +1442,8 @@ footer {
 /* ── Responsive ── */
 @media (max-width: 1024px) {
     .problem-grid,
-    .pillars-grid {
+    .pillars-grid,
+    .why-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
@@ -1456,7 +1511,8 @@ footer {
 @media (max-width: 640px) {
     .problem-grid,
     .pillars-grid,
-    .today-grid {
+    .today-grid,
+    .why-grid {
         grid-template-columns: 1fr;
     }
     
